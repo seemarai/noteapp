@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>wlit</title>
+<style>
+		body {background-color: powderblue; font-size: 200%;}
+		input {font-size: 150%; margin: 0 auto; size: 50%; }
+		button {
+    		
+    		font-size: 150%;
+			}
+
+</style>
+</head>
+
+
+<body>
+	<h1> view notes</h1>
+	<% notes.forEach(function(note, i){ %>
+	<div>
+		<p><strong><%= note.title %> </strong> <br/><%= note.note %> </p>
+
+
+		<button id="myButton2" type="submit"><a href="/editnote/<%= note._id %>">edit</a></button>
+		<button id="myButton3" type="submit"><a href="/deletenote/<%= note._id %>">delete</a></button><br/>
+			
+</div> <%})%>
+
+
+</body>
+
+
+</html>
+

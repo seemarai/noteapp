@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>wlit</title>
+<style>
+		body {background-color: powderblue; font-size: 250%;}
+		input {font-size: 150%; margin: 0 auto;}
+		button {
+    		
+    		font-size: 150%;
+			}
+
+</style>
+</head>
+
+
+<body>
+
+<form method="post" action="/editnote">
+	<input type="hidden" name="_id" class="form-control" value="<%= note._id %>">
+title: <input type="text" name='title' value="<%= note.title %>" placeholder="title" /><br/>
+ <textarea rows="10" cols="50" name="note"> <%= note.note%></textarea><br/>
+<button type="submit"> edit</button><br/>
+</form>
+</body>
+
+
+</html>
+
